@@ -56,12 +56,35 @@
 	<div class="container pt">
 		<div class="row mt">
 			<div class="col-lg-6 col-lg-offset-3 centered">
-				<h3>CAUSAL INFERENCE</h3>
+				<h3>Motivation</h3>
 				<hr>
 				<p>The reason why I am interested in causal inference is that it solves problems in the real life and explains them well. Sometimes we cannot use probability models to interpret the observational data, then we can consider a casual model. Furthermore, if we need to work on data-driven decision making, causal inference plays an important role in it.</p>
+				<p>In real life, we are always annoyed about traffic jam because we may get late for school or miss important appointments. So, to aviod traffic jam, the government is expected to mend certain roads to provide a better traffic condition. </p>
+
+	<div class="container pt">
+		<div class="row mt">
+			<div class="col-lg-6 col-lg-offset-3 centered">
+				<h3>The Setup </h3>
+				<hr>
+				<p>In this project, I'd like to build a causal model to reflect the traffic conditions. We can define the each road /R as random variables and then consider the pre-treatment just like age and sex for the patients. In this model, we have to think about some characteristics known prior to the start of the treatment, such as the number of lanes and the condition of the road surface and the number of traffic lights for a fixed length of road. Also, we define potential outcomes Y as a binary variable because we can set a threshold for average velocity in the traffic flow to regard the traffic condition as good or bad. Besides, random variables W is defined to express the impact of the weather as observed data, and we can simply define W as a binary variable for good weather for driving and bad weather for staying at home. At last, we assign our treatment A, mending the road, as a binary variable. {R, W, Y, A} are the most foundamental variables for this model.</p>
 
 
-	
+	<div class="container pt">
+		<div class="row mt">
+			<div class="col-lg-6 col-lg-offset-3 centered">
+				<h3>Assumption</h3>
+				<hr>
+                                                                <p> Exchangeability<p>
+                                                                <p> Positivity<p>
+                                                                <p> SUTVA<p>
+
+	<div class="container pt">
+		<div class="row mt">
+			<div class="col-lg-6 col-lg-offset-3 centered">
+				<h3>Causal Effect</h3>
+				<hr>
+                                                                <p> There are three good options to consider. 1 Average Treatment Effect. 2 Peer Effect. 3Longitudinal Effect<p>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
