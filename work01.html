@@ -76,7 +76,7 @@
 
 				<h3>The Setup </h3>
 				<hr>
-				<p>In this project, I'd like to build a causal model to reflect the traffic conditions. We can define the each road /R as random variables and then consider the pre-treatment just like age and sex for the patients. In this model, we have to think about some characteristics known prior to the start of the treatment, such as the number of lanes and the condition of the road surface and the number of traffic lights for a fixed length of road. Also, we define potential outcomes Y as a binary variable because we can set a threshold for average velocity in the traffic flow to regard the traffic condition as good or bad. Besides, random variables W is defined to express the impact of the weather as observed data, and we can simply define W as a binary variable for good weather for driving and bad weather for staying at home. At last, we assign our treatment A, mending the road, as a binary variable. {R, W, Y, A} are the most foundamental variables for this model.</p>
+				<p>In this project, I'd like to build a causal model to reflect the traffic conditions. We can define the each road R as random variables and then consider the pre-treatment just like age and sex for the patients. In this model, we have to think about some characteristics known prior to the start of the treatment, such as the number of lanes and the condition of the road surface and the number of traffic lights for a fixed length of road. Also, we define potential outcomes Y as a binary variable because we can set a threshold for average velocity in the traffic flow to regard the traffic condition as good or bad. Besides, random variables W is defined to express the impact of the weather as observed data, and we can simply define W as a binary variable for good weather for driving and bad weather for staying at home. At last, we assign our treatment A, mending the road, as a binary variable. {R, W, Y, A} are the most foundamental variables for this model.</p>
 
 				<h3>Assumption</h3>
 				<hr>
@@ -87,12 +87,15 @@
 				<h3>Causal Effect</h3>
 				<hr>
                                                            <p> There are three good options to consider. <p>
-                                                           <p> Conditional Average Treatment Effect<p>
+                                                           <p> <b>Conditional Average Treatment Effect: Weather condition is an important part that influent the traffic congestion. However, as observed data, we can just consider the conditional average treatment effect</b><p>
 				<ul>
-			<li> Conditional average treatment effect (CATE): \(\tau(x)=E[Y_i(1)-Y_i(0)|X_i=x] \) </li>
+			<li> Conditional average treatment effect (CATE): \(\tau(x)=E[Y_i(1)-Y_i(0)|W_i=w] \) </li>
 				</ul>
 
-                                                           <p> Peer Effect<p>
+                                                           <p><b> Peer Effect: </b><p>
+		<ul>
+			<li> Conditional average treatment effect (CATE): \(\Pi(x)=E[Y_i(1)-Y_i(0)|X_i=x] \) </li>
+				</ul>
                                                            <p> Longitudinal Effect<p>
 
 				<h3>DAG</h3>
