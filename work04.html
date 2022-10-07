@@ -12,9 +12,6 @@
 	</head>
 	<body class="is-preload">
 
-								</header>
-								<p> <b>The Setup:</b> Focussing on the simple instance where we have a binary treatment that can be easily extended to multiple treatments. Consider a sample of units drawn from a target population, indexed by \( i \in \{1,2,...,N\} \). Let \( W_i \) be the binary variable indicating \( W_i=1 \) for active treatment and \( W_i=0 \) for control. For unit \( i \), a vector of \( p \) pre-treatment covariates \( X_i \) are observed at baseline, and an outcome \( Y_i \) is observed after the treatment. Thus, there are four quantities associated with each sampled unit: \( Y_i(0),Y_i(1),W_i,X_i \), out of which three are observed - \( W_i, Y_i^{\text{obs}}=Y_i (W_i), X_i \) and one is missing - \( Y_i ^{\text{mis}}=Y_i(1-W_i) \). Given \( W_i \), there is a bijection between \( (Y_i ^{\text{obs}}, Y_i ^{\text{mis}}) \) and \( Y_i (0), Y_i (1)) \) as \( Y_i ^{\text{obs}} = Y_i(1)W_i + Y_i(0)(1-W_i) \). </p> 
-								<p> <b>Causal Estimand under consideration:</b> <br>
 									<ul>
 										<!--
 										<li> Population average treatment effect (PATE): \( \tau^{\text{PATE}} = E[Y_i(1)-Y_i(0)] \) </li>
