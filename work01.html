@@ -89,12 +89,17 @@
                                                            <p> There are three good options to consider. <p>
                                                            <p> <b>Conditional Average Treatment Effect:</b> Weather condition is an important part that influent the traffic congestion. However, as observed data, we can just consider the conditional average treatment effect<p>
 				<ul>
-			<li> Conditional average treatment effect (CATE): \(\tau(x)=E[Y_i(1)-Y_i(0)|W_i=w] \) </li>
+			<li> Conditional average treatment effect (CATE): \(\tau(w)=E[Y_i(1)-Y_i(0)|W_i=w] \) </li>
 				</ul>
 
                                                            <p><b> Peer Effect: </b>Transportation is a system that is consisted by lots of roads so that we cannot deny the fact that the one road's congestion will affect other road's condition because some vehicles may take a detour to save the time.<p>
-
+<ul>
+			<li> Peer effect (CATE): \(E[Y_n(a_1,a_2,...a_N)-Y_n(a'_1,a'_2,...,a'_N)] \) </li>
+				</ul>
                                                            <p> <b>Longitudinal Effect:</b>We always face morning hush hour and evening hush hour in one day. Different time often have different consequences to consider  <p>
+<ul>
+			<li> Longitudinal effect (CATE): \(E[Y_t(a_1,a_2,...a_N)-Y_t(a'_1,a'_2,...,a'_N)] \) </li>
+				</ul>
 
 				<h3>DAG</h3>
 				<hr>
