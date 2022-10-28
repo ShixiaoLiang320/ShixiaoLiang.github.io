@@ -7,12 +7,25 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
-
-    <title>STANLEY - Free Bootstrap Theme </title>
-
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+    <title>Causal Model in Transportation </title>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+<!DOCTYPE HTML>
 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	</head>
+	<body class="is-preload">
 
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
@@ -39,14 +52,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">STANLEY</a>
+          <a class="navbar-brand" href="index.html">Shixiao</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="work.html">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li>+1（608）5151070<br/>
+	  sliang85 at wisc dot edu</li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -58,55 +69,43 @@
 	<div class="container pt">
 		<div class="row mt">
 			<div class="col-lg-6 col-lg-offset-3 centered">
-				<h3>PROJECT NAME</h3>
+				<h3>Motivation</h3>
 				<hr>
-				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-			</div>
-		</div>
-		<div class="row mt centered">	
-			<div class="col-lg-8 col-lg-offset-2">
-				<p><img class="img-responsive" src="assets/img/portfolio/1.jpg" alt=""></p>
-				<p><img class="img-responsive" src="assets/img/portfolio/2.jpg" alt=""></p>
-				<p><img class="img-responsive" src="assets/img/portfolio/3.jpg" alt=""></p>
-				<p><bt>Client: <a href="#">BlackTie.co</a></bt> - <bt>Type: <a href="#">Illustration</a></bt> - <bt>Date: <a href="#">January 2014</a></bt></p>
-			</div>
-		</div><!-- /row -->
-	</div><!-- /container -->
-	
-	
-	<!-- +++++ Footer Section +++++ -->
-	
-	<div id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4">
-					<h4>My Bunker</h4>
-					<p>
-						Some Address 987,<br/>
-						+34 9054 5455, <br/>
-						Madrid, Spain.
-					</p>
-				</div><!-- /col-lg-4 -->
-				
-				<div class="col-lg-4">
-					<h4>My Links</h4>
-					<p>
-						<a href="#">Dribbble</a><br/>
-						<a href="#">Twitter</a><br/>
-						<a href="#">Facebook</a>
-					</p>
-				</div><!-- /col-lg-4 -->
-				
-				<div class="col-lg-4">
-					<h4>About Stanley</h4>
-					<p>This cute theme was created to showcase your work in a simple way. Use it wisely.</p>
-				</div><!-- /col-lg-4 -->
-			
-			</div>
-		
-		</div>
-	</div>
-	
+				<p>The reason why I am interested in causal inference is that it solves problems in the real life and explains them well. Sometimes we cannot use probability models to interpret the observational data, then we can consider a casual model. Furthermore, if we need to work on data-driven decision making, causal inference plays an important role in it.</p>
+				<p>In real life, we are always annoyed about traffic jam because we may get late for school or miss important appointments. So, to aviod traffic jam, the government is expected to mend certain roads to provide a better traffic condition. </p>
+
+				<h3>The Setup </h3>
+				<hr>
+				<p>In this project, I'd like to build a causal model to reflect the traffic conditions. We can define the each road R as random variables and then consider the pre-treatment just like age and sex for the patients. In this model, we have to think about some characteristics known prior to the start of the treatment, such as the number of lanes and the condition of the road surface and the number of traffic lights for a fixed length of road. Also, we define potential outcomes Y as a binary variable because we can set a threshold for average velocity in the traffic flow to regard the traffic condition as good or bad. Besides, random variables W is defined to express the impact of the weather as observed data, and we can simply define W as a binary variable for good weather for driving and bad weather for staying at home. At last, we assign our treatment A, mending the road, as a binary variable. {R, W, Y, A} are the most foundamental variables for this model.</p>
+
+				<h3>Assumption</h3>
+				<hr>
+                                                           <p> <b>Exchangeability:</b>a road's realized treatment does not provide any information on what would have happened to another one under various treatment assignments<p>
+                                                           <p> <b>Positivity:</b> We can assume positivity because the probability of each event in real life have to be positive<p>
+                                                    
+
+				<h3>Causal Effect</h3>
+				<hr>
+                                                           <p> There are three good options to consider. <p>
+                                                           <p> <b>Conditional Average Treatment Effect:</b> Weather condition is an important part that influent the traffic congestion. However, as observed data, we can just consider the conditional average treatment effect<p>
+				<ul>
+			<li> Conditional average treatment effect (CATE): \(\tau(w)=E[Y_i(1)-Y_i(0)|W_i=w] \) </li>
+				</ul>
+
+                                                           <p><b> Peer Effect: </b>Transportation is a system that is consisted by lots of roads so that we cannot deny the fact that the one road's congestion will affect other road's condition because some vehicles may take a detour to save the time.<p>
+				<ul>
+			<li> Average peer effect : \(E[Y_n(a_1,a_2,...a_N)-Y_n(a'_1,a'_2,...,a'_N)] \) </li>
+				</ul>
+
+                                                           <p> <b>Longitudinal Effect:</b>We always face morning hush hour and evening hush hour in one day. Different time often have different consequences to consider  <p>
+				<ul>
+			<li> Longitudinal average treatment effect : \(E[Y_t(a_1,a_2,...a_N)-Y_t(a'_1,a'_2,...,a'_N)] \) </li>
+				</ul>
+
+				<h3>DAG</h3>
+				<hr>
+				<img src="assets/img/DAG.jpg" alt="Directed Acyclic Graph">
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
