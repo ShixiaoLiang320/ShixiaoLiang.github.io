@@ -69,9 +69,9 @@
 	<div class="container pt">
 		<div class="row mt">
 			<div class="col-lg-6 col-lg-offset-3 centered">
-				<h3>Assumption for Identification</h3>
+				<h3>Assumptions for Identification</h3>
 				<hr>
-				<p><b>Consistency:</b>The consistency can be assumed for the model because we the potential outcome of traffic jam in our model is defined as a binary variable and the potential outcome will not change because of treatment.</p>
+				<p><b>Consistency:</b>The consistency can be assumed for the model because we the potential outcome of traffic jam in our model is defined as a binary variable and the potential outcome will not change because of treatments.</p>
 				<p><b>Positivity:</b>We can assume positivity because the probability of each event in real life have to be positive</p>
 				<p><b>Exchangeability:</b> One road's realized treatment does not provide any information on what would have happened to another one under various treatment assignments<p>
 				
@@ -84,13 +84,12 @@
 
 				<h3>Identification</h3>
 				<hr>
-                                                          	 <p> <b>Extended g-formula</b></p>
-				<ul>
-                                                          	 <p><li><b>Consistency:</b> As what we assumed before, the potential outcome \( Y(a,w) = Y(a,w,X(w)) \), then we have the same expecation: \(E[Y(a,w,x)∣X(w)=x]=E[Y(a,w,x)∣X(w)=x] \).</li> </p>
-				<p><li> <b>Consistency:</b> As what we assumed before, the potential outcome \(\tau(w)=E[Y_i(1)-Y_i(0)|W_i=w] \) </li></p>
-				<p><li>\(E[Y(a,l,x)∣X(l)=x]=E[Y(a,l,x)] \)</li></p> 
+                                                          	 <p> <b>By Extended g-formula</b></p>
+				<ul>		
+                                                          	 <p><li><b>Consistency:</b> As what we assumed before, the potential outcome will not change because of  \( Y(a,w) = Y(a,w,X(w)) \), then we have the same expecation: \(E[Y(a,w)∣X(w)=x]=E[Y(a,w,x)∣X(w)=x] \).</li> </p>
 
-				<p><b> Markov Compatibility:</b>Y(a,l,x) is independent with X(l)</p>
+
+				<p><b> Markov Compatibility:</b>\( Y(a,w,x) \) is independent with X(w) because the potential </p>
 
 				</ul>                     
 
@@ -100,10 +99,8 @@
 				<hr>
 				
 				<ul>
-                                                           	<p><li>The result we get is that:\( E[Y(a,x)∣X(l)=x]=E[Y∣X=x,A=a] \)</li></p>
-                                                           	<p> <b> </b></p>
-			
-				<li> Conditional average treatment effect (CATE): \(\tau(w)=E[Y_i(1)-Y_i(0)|W_i=w] \) </li>
+                                                           	<p><li>The result we get is that:<b> \( E[Y(a,x)∣X(w)=x]=E[Y∣X=x,A=a] \) </b></li></p>
+                                                           	<p> To get the expectation of potential outcome(or we say traffic conditions) under different weather conditions, we just need to observe the given treatment and the corresponding road characteristics. That's a easy thing to forecast for the traffic jam in our real lifes and it is also reasonable</p>
 				</ul>
 
 
