@@ -75,37 +75,28 @@
 				<p><b>Positivity:</b>We can assume positivity because the probability of each event in real life have to be positive</p>
 				<p><b>Exchangeability:</b> One road's realized treatment does not provide any information on what would have happened to another one under various treatment assignments<p>
 				
-				<h3>The Setup </h3>
+				<h3>SWIG</h3>
 				<hr>
-				<p>In this project, I'd like to build a causal model to reflect the traffic conditions. We can define the each road R as random variables and then consider the pre-treatment just like age and sex for the patients. In this model, we have to think about some characteristics known prior to the start of the treatment, such as the number of lanes and the condition of the road surface and the number of traffic lights for a fixed length of road. Also, we define potential outcomes Y as a binary variable because we can set a threshold for average velocity in the traffic flow to regard the traffic condition as good or bad. Besides, random variables W is defined to express the impact of the weather as observed data, and we can simply define W as a binary variable for good weather for driving and bad weather for staying at home. At last, we assign our treatment A, mending the road, as a binary variable. {R, W, Y, A} are the most foundamental variables for this model.</p>
+				<p><b>Origin graph:</b></p>
+				<img src="assets/img/DAG.jpg" alt="Directed Acyclic Graph">
+				<p><b>SWIG:</b></p>
+				<img src="assets/img/SWIG.jpg" alt="SWIG">
 
-				<h3>Assumption</h3>
+				<h3>Identification</h3>
 				<hr>
-                                                           <p> <b>Exchangeability:</b>a road's realized treatment does not provide any information on what would have happened to another one under various treatment assignments<p>
-                                                           <p> <b>Positivity:</b> We can assume positivity because the probability of each event in real life have to be positive<p>
+                                                          	 <p> <b>Extended g-formula</b>a road's realized treatment does not provide any information on what would have happened to another one under various treatment assignments<p>
+                                                          	 <p> <b>Positivity:</b> We can assume positivity because the probability of each event in real life have to be positive<p>
                                                     
 
-				<h3>Causal Effect</h3>
+				<h3>Interpretation</h3>
 				<hr>
-                                                           <p> There are three good options to consider. <p>
-                                                           <p> <b>Conditional Average Treatment Effect:</b> Weather condition is an important part that influent the traffic congestion. However, as observed data, we can just consider the conditional average treatment effect<p>
+                                                           	<p><p>
+                                                           	<p> <b>Conditional Average Treatment Effect:</b> Weather condition is an important part that influent the traffic congestion. However, as observed data, we can just consider the conditional average treatment effect<p>
+
 				<ul>
 			<li> Conditional average treatment effect (CATE): \(\tau(w)=E[Y_i(1)-Y_i(0)|W_i=w] \) </li>
 				</ul>
 
-                                                           <p><b> Peer Effect: </b>Transportation is a system that is consisted by lots of roads so that we cannot deny the fact that the one road's congestion will affect other road's condition because some vehicles may take a detour to save the time.<p>
-				<ul>
-			<li> Average peer effect : \(E[Y_n(a_1,a_2,...a_N)-Y_n(a'_1,a'_2,...,a'_N)] \) </li>
-				</ul>
-
-                                                           <p> <b>Longitudinal Effect:</b>We always face morning hush hour and evening hush hour in one day. Different time often have different consequences to consider  <p>
-				<ul>
-			<li> Longitudinal average treatment effect : \(E[Y_t(a_1,a_2,...a_N)-Y_t(a'_1,a'_2,...,a'_N)] \) </li>
-				</ul>
-
-				<h3>DAG</h3>
-				<hr>
-				<img src="assets/img/DAG.jpg" alt="Directed Acyclic Graph">
 
 
     <!-- Bootstrap core JavaScript
