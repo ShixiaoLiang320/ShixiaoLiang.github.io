@@ -109,9 +109,10 @@
 				<h3>Some considerations for result</h3>
 				<hr>			
 				<ul>
-                                                           	<p>The result we get is that:<b> \( ATE = \beta' \), but we have to face two problems </b></p>
+                                                           	<p>The result we get is that:<b> \( ATE = \beta' \), but we have to face two problems which may influent the model</b></p>
                                                            	<p><li><b>The choice of \( \mu \): </b> We just set that \( \mu(X,A; \theta) =\theta'[X,A]^T  \). However, we have more choices and they give us different answers though they may get closed. For example, we have another choice given in class that: \( \mu(X,A; \theta) =\theta'[X,AX]^T  \), and the interaction term will give us some information and the result is \( \beta' E_N[X]\)</li></p>
-				<p><li><b>Modelling assumptions for conditional mean: </b> Also, when we use linear regression, we clearly assume the linearility </li></p>
+				<p><li><b>Modelling assumptions for conditional mean: </b> Also, when we use linear regression, we clearly assume the linearity in our model. </li></p>
+				<p><li><b>Computational problem of matrix inverse</b>When the data set is quite large, it's time-consuming for the estimation </p></li>
 				</ul>
 
     <!-- Bootstrap core JavaScript
