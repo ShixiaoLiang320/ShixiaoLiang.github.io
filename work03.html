@@ -88,14 +88,12 @@
 				<p><li><b> Define function \( \mu \): </b> Since we have made an assumptions that \( \mu(X,A; \theta) =\theta'[X,A]^T  \), then we can decompose the \( \theta = [\alpha, \beta] \). Then we have  \( \mu(X,A; \theta) =\theta'[X,A]^T =\alpha ' X + \beta ' A \). Then what we need to do is find an estimation for \( \theta \) </li></p>
 				</ul>
 				<ul>
-				<p><li><b> Causal Irrevelence:</b> By causal irrevelence we have: \(Y(a,w,x)=Y(a,x)\) because in this causal model, x gives the full information including w. In reality, that means we just need to consider the road condition because it shows up as a mediator between weather condition and traffic jam. And then we can have expectation: \(E[Y(a,w,x)]=E[Y(a,x)] \)</li></p>
+				<p><li><b> Solving the linear systerm :</b>By taking a derivative of mean square error, we know that \( \theta^{hat} = E_N[[X,A]'[X,A]]^{-1}E_N[Y[X,A]^T] \)</li></p>
 				</ul>
 				<ul>
-				<p><li><b>Markov Compatibility :</b>  For the potential outcome \(Y(a,x)\), it is independent with \(X\) and \(A\) so that we have \(E[Y(a,x)]=E[Y(a,x)∣X=x,A=a]\) </li></p>
+				<p><li><b>Find ATE :</b> \( ATE = E[Y(1)-Y(0)] =  \mu(X,1; \theta) -  \mu(X,0; \theta) = E_N[\theta ' [0,1]^T] =\beta'  \)</li></p>
 				</ul>
-				<ul>
-				<p><li><b>Consistency:</b> At last, we combine these equalities and we have\(E[Y(a,x)∣X(w)=x]=E[Y(a,x)∣X=x,A=a]\) and by consistency we have \(Y=Y(X,A)\). That is \(E[Y(a,x)∣X(w)=x]=E[Y∣X=x,A=a]\)</li></p>
-				</ul>                     
+                    
 
 				
 
