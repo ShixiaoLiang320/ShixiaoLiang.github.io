@@ -75,7 +75,8 @@
 				<p><b>Consistency:</b>The consistency can be assumed for the model because we the potential outcome of traffic jam in our model is defined as a binary variable and the potential outcome will not change because of treatments and road conditions.</p>
 				<p><b>Positivity:</b>We can assume positivity because the probability of each event in real life have to be positive</p>
 				<p><b>Exchangeability:</b> One road's realized treatment does not provide any information on what would have happened to another one under various treatment assignments<p>
-				<p><b>\( the form of \mu \)</b>By Identification: <b> \( E[Y(a,x)∣X(w)=x]=E[Y∣X=x,A=a] \) </b>,So we don't need to consider the influence from W(weather condition). Then in linear regression, we can assume that \( \mu(X,A; \theta) =\theta[X,A]^T  \) </p>
+				<p><b>Secondly we give some new assumptions for estimation</b></p>
+				<p><b>the form of \mu: </b>By Identification: <b> \( E[Y(a,x)∣X(w)=x]=E[Y∣X=x,A=a] \) </b>,So we don't need to consider the influence from W(weather condition). Then in linear regression, we can assume that \( \mu(X,A; \theta) =\theta[X,A]^T  \) </p>
 		
 				<h3>Estimation</h3>
 				<hr>
@@ -84,7 +85,7 @@
                                                           	 <p><li><b>Clean the data and rebuild the variable X</b>Firstly we remove the missing data in our data set and then define a new variable \( X = [1,X_road] \) where \(X_road \) stands for road condition given the weather condition= </li> </p>
 				</ul>
 				<ul>
-				<p><li><b> Define function \mu </b> \( Y(a,w,x) \) is independent with \(X(w)\) because of Markov compatibility in the graph and then we can waive the conditional part.\( E[Y(a,w,x)∣X(w)=x] =E[Y(a,w,x)] \)</li></p>
+				<p><li><b> Define function \mu </b> </li></p>
 				</ul>
 				<ul>
 				<p><li><b> Causal Irrevelence:</b> By causal irrevelence we have: \(Y(a,w,x)=Y(a,x)\) because in this causal model, x gives the full information including w. In reality, that means we just need to consider the road condition because it shows up as a mediator between weather condition and traffic jam. And then we can have expectation: \(E[Y(a,w,x)]=E[Y(a,x)] \)</li></p>
