@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+    <title>Causal Model in Transportation </title>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	</head>
+	<body class="is-preload">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/hover.zoom.js"></script>
+    <script src="assets/js/hover.zoom.conf.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Shixiao</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>+1（608）5151070<br/>
+	  sliang85 at wisc dot edu</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	
+	
+	<!-- +++++ Projects Section +++++ -->
+	
+	<div class="container pt">
+		<div class="row mt">
+			<div class="col-lg-6 col-lg-offset-3 centered">
+				<h3>Assumptions for Linear regression</h3>
+				<hr>
+				<p><b>Consistency:</b>The consistency can be assumed for the model because we the potential outcome of traffic jam in our model is defined as a binary variable and the potential outcome will not change because of treatments and road conditions.</p>
+				<p><b>Positivity:</b>We can assume positivity because the probability of each event in real life have to be positive</p>
+				<p><b>Exchangeability:</b> One road's realized treatment does not provide any information on what would have happened to another one under various treatment assignments<p>
+				
+				<h3>SWIG</h3>
+				<hr>
+				<p><b>Origin graph:</b></p>
+				<img src="assets/img/origin.jpg" alt="Directed Acyclic Graph">
+				<p><b>SWIG:</b></p>
+				<img src="assets/img/SWIG.jpg" alt="SWIG">
+
+				<h3>Identification</h3>
+				<hr>
+                                                          	 <p> <b>By Extended g-formula</b></p>
+				<ul>		
+                                                          	 <p><li><b>Consistency:</b> As what we assumed before, the potential outcome will not change because of consistency:  \( Y(a,w) = Y(a,w,X(w)) \), then we have the same expecation: \(E[Y(a,w)∣X(w)=x]=E[Y(a,w,x)∣X(w)=x] \).</li> </p>
+				</ul>
+				<ul>
+				<p><li><b> Markov Compatibility:</b> \( Y(a,w,x) \) is independent with \(X(w)\) because of Markov compatibility in the graph and then we can waive the conditional part.\( E[Y(a,w,x)∣X(w)=x] =E[Y(a,w,x)] \)</li></p>
+				</ul>
+				<ul>
+				<p><li><b> Causal Irrevelence:</b> By causal irrevelence we have: \(Y(a,w,x)=Y(a,x)\) because in this causal model, x gives the full information including w. In reality, that means we just need to consider the road condition because it shows up as a mediator between weather condition and traffic jam. And then we can have expectation: \(E[Y(a,w,x)]=E[Y(a,x)] \)</li></p>
+				</ul>
+				<ul>
+				<p><li><b>Markov Compatibility :</b>  For the potential outcome \(Y(a,x)\), it is independent with \(X\) and \(A\) so that we have \(E[Y(a,x)]=E[Y(a,x)∣X=x,A=a]\) </li></p>
+				</ul>
+				<ul>
+				<p><li><b>Consistency:</b> At last, we combine these equalities and we have\(E[Y(a,x)∣X(w)=x]=E[Y(a,x)∣X=x,A=a]\) and by consistency we have \(Y=Y(X,A)\). That is \(E[Y(a,x)∣X(w)=x]=E[Y∣X=x,A=a]\)</li></p>
+				</ul>                     
+
+				
+
+				<h3>Interpretation</h3>
+				<hr>
+				
+				<ul>
+                                                           	<p><li>The result we get is that:<b> \( E[Y(a,x)∣X(w)=x]=E[Y∣X=x,A=a] \) </b></li></p>
+                                                           	<p> To get the expectation of potential outcome(or we say traffic conditions) under different weather conditions, we just need to observe the given treatment and the corresponding road characteristics. That's a easy thing to forecast for the traffic jam in our real lifes and it is also reasonable</p>
+				</ul>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
