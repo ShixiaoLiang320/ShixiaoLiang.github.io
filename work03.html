@@ -75,17 +75,16 @@
 				<p><b>Consistency:</b>The consistency can be assumed for the model because we the potential outcome of traffic jam in our model is defined as a binary variable and the potential outcome will not change because of treatments and road conditions.</p>
 				<p><b>Positivity:</b>We can assume positivity because the probability of each event in real life have to be positive</p>
 				<p><b>Exchangeability:</b> One road's realized treatment does not provide any information on what would have happened to another one under various treatment assignments<p>
-				<p>By Identification: <li><b> \( E[Y(a,x)∣X(w)=x]=E[Y∣X=x,A=a] \) <\b><\li>,So we don't need to consider the influence from W(weather condition). Then in linear regression, we can assume that<li> \( \mu(X,A; \theta) =\theta[X,A].T  \)  <\li><\p>
+				<p>By Identification: <li><b> \( E[Y(a,x)∣X(w)=x]=E[Y∣X=x,A=a] \) </b>,So we don't need to consider the influence from W(weather condition). Then in linear regression, we can assume that \( \mu(X,A; \theta) =\theta[X,A].T  \)  </li></p>
 		
 
-				<h3>SWIG</h3>
+				<h3><li>Assumption for \( \mu \)</li></h3>
 				<hr>
-				<p><b>Origin graph:</b></p>
-				<img src="assets/img/origin.jpg" alt="Directed Acyclic Graph">
 				<p><b>SWIG:</b></p>
 				<img src="assets/img/SWIG.jpg" alt="SWIG">
-
-				<h3>Identification</h3>
+				<p>By Identification: <li><b> \( E[Y(a,x)∣X(w)=x]=E[Y∣X=x,A=a] \) </b>,So we don't need to consider the influence from W(weather condition). Then in linear regression,based on SWIG, we can assume that \( \mu(X,A; \theta) =\theta[X,A].T  \)  </li></p>
+		
+				<h3>Estimation</h3>
 				<hr>
                                                           	 <p> <b>By Extended g-formula</b></p>
 				<ul>		
