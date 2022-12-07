@@ -69,16 +69,21 @@
 	<div class="container pt">
 		<div class="row mt">
 			<div class="col-lg-6 col-lg-offset-3 centered">
-				<h3>Assumptions for Sensitive Analysis</h3>
+				<h3>Assumptions for Sensitivity Analysis</h3>
 				<hr>
 				<p><b>Firstly we keep our assumptions for estimation</b></p>
 				<p><b>Consistency:</b>The consistency can be assumed for the model because we the potential outcome of traffic jam in our model is defined as a binary variable and the potential outcome will not change because of treatments and road conditions.</p>
 				<p><b>Positivity:</b>We can assume positivity because the probability of each event in real life have to be positive</p>
 				<p><b>Exchangeability:</b> One road's realized treatment does not provide any information on what would have happened to another one under various treatment assignments<p>
-				<p><b>Secondly we give some new assumptions for estimation</b></p>
 				<p><b>the form of \( \mu: \) </b>By Identification: <b> \( E[Y(a,x)∣X(w)=x]=E[Y∣X=x,A=a] \) </b>,So we don't need to consider the influence from W(weather condition). Then in linear regression, we can assume that \( \mu(X,A; \theta) =\theta'[X,A]^T  \) </p>
-		
-				<h3>Estimation</h3>
+				<p><b>Secondly we change a function to find estimation by replacing the second term in our assumptions</b></p>
+				<p> Instead of \( \mu(X,A; \theta) =\theta'[X,A]^T  \) , we assume that:\( \mu(X,A; \theta) =\theta'[X,XA]^T  \) </p>
+				<p><b> Thirdly, we use logistic regression to estimate ATE instead of linear regression </b></p>
+				<p>We need to introduce a new link function g, so that we can model \( \eta (X,A;\theta) \) as a linear function of \( \theta \) by logistic regression</p>
+				<p><b> If our modeling assumptions are violated, and there is an unmearsurable confounding in the model.</b></p> 
+				<p>Then we have to give up outcome regression. But Manski bound can give us a suitable bound.</p>
+					
+				<h3>Alternative ways for Estimation</h3>
 				<hr>
                                                           	 <p> <b>By linear regression</b></p>
 				<ul>		
