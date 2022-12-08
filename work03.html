@@ -94,25 +94,25 @@
 				<p><li><b> Define a new function \( \mu(X,A; \theta) =\theta'[X,XA]^T \): </b></li></p>
 				<p> Similarly to the last part for estimation, we can minimize mean square error to estimate \( \theta \) so that \( \widehat{\theta}:=min_{\theta} E_{N}[(Y-\mu(X,A;\theta))^{2}].\), by taking derivative, we can get \( \theta = \widehat{\theta}:=E_{N}[\begin{bmatrix} X \\ XA \end{bmatrix}\begin{bmatrix} X \\ XA \end{bmatrix}']^{-1}E_{N}[Y\begin{bmatrix} X \\ XA \end{bmatrix}]  \) from the data and the ATE is like \( ATE = E[Y(1)-Y(0)] =  \mu(X,X; \theta) -  \mu(X,0; \theta) = E_N[\theta ' [0,1]^T] =\beta'E_N[X] \) </p>
 				</ul>
+
 				<ul>
-				<p><li><b> Solving the linear systerm :</b>By taking a derivative of mean square error, we know that \( \theta_{estimate} = E_N[[X,A]'[X,A]]^{-1}E_N[Y[X,A]^T] \)</li></p>
-				</ul>
-				<ul>
-				<p><li><b>Find ATE :</b> \( ATE = E[Y(1)-Y(0)] =  \mu(X,1; \theta) -  \mu(X,0; \theta) = E_N[\theta ' [0,1]^T] =\beta'  \)</li></p>
+				<p><li><b>By logistic regression</b></li></p>
+				<p></p>
 				</ul>
                    
 				
 
-				<h3>Impact of Data</h3>
+				<h3>Manski bound</h3>
 				<hr>
 				<ul>
-                                                           	<p>The estimation we get is that:<b> \( \theta_{estimate} = E_N[[X,A]^T[X,A]]^{-1}E_N[Y[X,A]^T] \) </b></p>
-                                                           	<p>The data we need to consider about is that the treatment and the road condition. Since this is a simple algorithm, we don't need to show much about how to use the data. The most important part is the size of dataset. In the algorithm, we have to compute the inverse matrix of \([X,A]' \), so the dataset cannot be too large. However, we need enough samples to show that the validation of the result. As for, a propriate size of dataset is necessary for the model</p>
+                                                           	<p>C:=E[Y∣A=1,X]P(A=1∣X)−E[Y∣A=0,X](1−P(A=1∣X)) </p>
+                                                           	<p>​\( C - P(A=1|X) \leq E[ Y(1)-Y(0) | X] \leq C + (1-P(A=1|X))C−P(A=1∣X)≤E[Y(1)−Y(0)∣X]≤C+(1−P(A=1∣X)) \)</p>
+					<p>Without any assupmtions, we can get the bound of conditional ATE depend on P(A=1∣X), we just need to keep the positivity property<\p>
 				</ul>
 
 
 				
-				<h3>Some considerations about result</h3>
+				<h3>Assumptions that cannot be investigated</h3>
 				<hr>			
 				<ul>
                                                            	<p>The result we get is that: \( ATE = \beta' \), but we have to face three problems which may influent the model</p>
