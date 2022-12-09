@@ -97,7 +97,7 @@
 
 				<ul>
 				<p><li><b>By logistic regression</b></li></p>
-				<p>Recovering \( \theta \)​ to maximize the log-likelihood of the data. Similarly to before, \( \hat { \theta } : = \max _ { \theta } E _ { N } [ \log \{ \mu ( X , A ; \theta ) ^ { Y } ( 1 - \mu ( X , A ; \theta ) ) ^ { 1 - Y } \} ]\) and take derivative. Then we have \(  ATE = E[Y(1)-Y(0)] =  \mu(X,1; \theta) -  \mu(X,0; \theta)\)</p>
+				<p>Recovering \( \theta \)​ to maximize the log-likelihood of the data. Similarly to before, we firstly choose the linkfunction:\( logit(Y):=\frac{log(y)}{log(1-y)} \), such that \(g(E[y|X,A]):=g(\mu (Y,X;\theta)):=\eta (X,A;\beta). \).  \( \hat { \theta } : = \max _ { \theta } E _ { N } [ \log \{ \mu ( X , A ; \theta ) ^ { Y } ( 1 - \mu ( X , A ; \theta ) ) ^ { 1 - Y } \} ]\) and take derivative. Once we choose that \(\eta(X,A;\theta):=\theta'\begin{bmatrix} x \\ A \end{bmatrix}. \)Then we have \(  ATE = E[Y(1)-Y(0)] =  \mu(X,1; \theta) -  \mu(X,0; \theta)\)</p>
 				</ul>
                    
 				
@@ -115,8 +115,8 @@
 				<h3>Assumptions that cannot be investigated</h3>
 				<hr>			
 				<ul>
-                                                           <p>For the result of Minski, we just need to keep the assumption of positivity. <\p>
-				<p> For the result of outcome regression, we need to keep the assumptions of estimation and hold modeling assumptions.
+                                                           <p>For the result of Minski, we just need to keep the assumption of positivity. </p>
+				<p> For the result of outcome regression, we need to keep the assumptions of estimation and hold modeling assumptions.</p>
 				</ul>
 
     <!-- Bootstrap core JavaScript
