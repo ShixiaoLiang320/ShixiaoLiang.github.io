@@ -107,7 +107,7 @@
 				<ul>
 				<p>If we have data in the model, then we can use Manski bound to capture the bias caused by unmeasured confounding.</p>
                                                            	<p>We can definite the parameter: \(C:=E[Y∣A=1,X]P(A=1∣X)−E[Y∣A=0,X](1−P(A=1∣X)) \) </p>
-				<> Firstly we rewrite the conditional ATE as $$E[Y(1)-Y(0)|X]=E[Y(1)|X,A=1]P(A=1|X)+E[Y(1)|X=x,A=0]P(A=0|X=x)-E[Y(0)|X=x,A=1]P(A=1|X=x)-E[Y(0)|X=x,A=0]P(A=0|X=x)$$. Ande then by consistency and the definition of propensity score, the result equals to\( E[Y|X,A=1]P(A=1|X)+E[Y(1)|X=x,A=0](1-P(A=0|X=x))-E[Y(0)|X=x,A=1]P(A=1|X=x)-E[Y|X=x,A=0](1-P(A=0|X=x)) \)
+				<p> Firstly we rewrite the conditional ATE as $$E[Y(1)-Y(0)|X]=E[Y(1)|X,A=1]P(A=1|X)+E[Y(1)|X=x,A=0]P(A=0|X=x)-E[Y(0)|X=x,A=1]P(A=1|X=x)-E[Y(0)|X=x,A=0]P(A=0|X=x)$$. Ande then by consistency and the definition of propensity score, the result equals to\( E[Y|X,A=1]P(A=1|X)+E[Y(1)|X=x,A=0](1-P(A=0|X=x))-E[Y(0)|X=x,A=1]P(A=1|X=x)-E[Y|X=x,A=0](1-P(A=0|X=x)) \)
                                                            	<p>​We can give a bound for conditional ATE\( C - P(A=1|X) \leq E[ Y(1)-Y(0) | X] \leq C + (1-P(A=1|X)) \)</p>
 					<p>Without any assupmtions, we can get the bound of conditional ATE depend on P(A=1∣X), we just need to keep the positivity property</p>
 				</ul>
