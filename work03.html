@@ -111,8 +111,8 @@
 				<h3>Manski bound</h3>
 				<hr>
 				<ul>
-				<p>If we have data in the model, then we can use Manski bound to capture the bias caused by unmeasured confounding.</p>
-                                                           	<p>We can definite the parameter: \(C:=E[Y∣A=1,X]P(A=1∣X)−E[Y∣A=0,X](1−P(A=1∣X)) \) </p>
+				<p>If our modelling assumptions for outcome regression are violated, then we need to consider to give a bound to measure the bound caused by unmeasured confounding.</p>
+				<p>If we have data in the model, then we can use Manski bound to capture the bias caused by unmeasured confounding.</p>                       
 				<p> Firstly we rewrite the conditional ATE</p>
 				<p> \(E[Y(1)-Y(0)|X]=E[Y(1)|X,A=1]P(A=1|X)+E[Y(1)|X=x,A=0]P(A=0|X=x)-E[Y(0)|X=x,A=1]P(A=1|X=x)-E[Y(0)|X=x,A=0]P(A=0|X=x)\). </p>
 				<p>And then by consistency and the definition of propensity score, the result equals to:  \( E[Y|X,A=1]P(A=1|X)+E[Y(1)|X=x,A=0](1-P(A=0|X=x))-E[Y(0)|X=x,A=1]P(A=1|X=x)-E[Y|X=x,A=0](1-P(A=0|X=x)) \)
