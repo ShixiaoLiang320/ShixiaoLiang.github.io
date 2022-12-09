@@ -94,7 +94,9 @@
 				</ul>
 				<ul>
 				<p><li><b> Define a new function \( \mu(X,A; \theta) =\theta'[X,XA]^T \): </b></li></p>
-				<p> Similarly to the last part for estimation, we can minimize mean square error to estimate \( \theta \) so that \( \widehat{\theta}:=min_{\theta} E_{N}[(Y-\mu(X,A;\theta))^{2}].\), by taking derivative, we can get \( \theta = \widehat{\theta}:=E_{N}[\begin{bmatrix} X \\ XA \end{bmatrix}\begin{bmatrix} X \\ XA \end{bmatrix}']^{-1}E_{N}[Y\begin{bmatrix} X \\ XA \end{bmatrix}]  \) from the data and the ATE is like \( ATE = E[Y(1)-Y(0)] =  \mu(X,X; \theta) -  \mu(X,0; \theta) = E_N[\theta ' [0,1]^T] =\beta'E_N[X] \) </p>
+				<p> Similarly to the last part for estimation, we can minimize mean square error to estimate \( \theta \) so that \( \widehat{\theta}:=min_{\theta} E_{N}[(Y-\mu(X,A;\theta))^{2}].\).</p> 
+				<p>By taking derivative, we can get \( \theta = \widehat{\theta}:=E_{N}[\begin{bmatrix} X \\ XA \end{bmatrix}\begin{bmatrix} X \\ XA \end{bmatrix}']^{-1}E_{N}[Y\begin{bmatrix} X \\ XA \end{bmatrix}]  \) from the data.</p>
+				<p>The ATE is like \( ATE = E[Y(1)-Y(0)] =  \mu(X,X; \theta) -  \mu(X,0; \theta) = E_N[\theta ' [0,1]^T] =\beta'E_N[X] \) </p>
 				</ul>
 
 				<ul>
@@ -112,7 +114,8 @@
 				<p>If we have data in the model, then we can use Manski bound to capture the bias caused by unmeasured confounding.</p>
                                                            	<p>We can definite the parameter: \(C:=E[Y∣A=1,X]P(A=1∣X)−E[Y∣A=0,X](1−P(A=1∣X)) \) </p>
 				<p> Firstly we rewrite the conditional ATE</p>
-				<p> \(E[Y(1)-Y(0)|X]=E[Y(1)|X,A=1]P(A=1|X)+E[Y(1)|X=x,A=0]P(A=0|X=x)-E[Y(0)|X=x,A=1]P(A=1|X=x)-E[Y(0)|X=x,A=0]P(A=0|X=x)\). And then by consistency and the definition of propensity score, the result equals to\( E[Y|X,A=1]P(A=1|X)+E[Y(1)|X=x,A=0](1-P(A=0|X=x))-E[Y(0)|X=x,A=1]P(A=1|X=x)-E[Y|X=x,A=0](1-P(A=0|X=x)) \)
+				<p> \(E[Y(1)-Y(0)|X]=E[Y(1)|X,A=1]P(A=1|X)+E[Y(1)|X=x,A=0]P(A=0|X=x)-E[Y(0)|X=x,A=1]P(A=1|X=x)-E[Y(0)|X=x,A=0]P(A=0|X=x)\). </p>
+				<p>And then by consistency and the definition of propensity score, the result equals to\( E[Y|X,A=1]P(A=1|X)+E[Y(1)|X=x,A=0](1-P(A=0|X=x))-E[Y(0)|X=x,A=1]P(A=1|X=x)-E[Y|X=x,A=0](1-P(A=0|X=x)) \)
                                                            	<p>​We can give a bound for conditional ATE:</p>
 				<p>\( C - P(A=1|X) \leq E[ Y(1)-Y(0) | X] \leq C + (1-P(A=1|X)) \)</p>
 					<p>Without any assupmtions, we can get the bound of conditional ATE depend on P(A=1∣X), we just need to keep the positivity property</p>
