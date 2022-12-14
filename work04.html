@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+    <title>Causal Model in Transportation </title>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+	</head>
+	<body class="is-preload">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/hover.zoom.js"></script>
+    <script src="assets/js/hover.zoom.conf.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Shixiao</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>+1（608）5151070<br/>
+	  sliang85 at wisc dot edu</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	
+	
+	<!-- +++++ Projects Section +++++ -->
+	
+	<div class="container pt">
+		<div class="row mt">
+			<div class="col-lg-6 col-lg-offset-3 centered">
+				<h3>Assumptions for Sensitivity Analysis</h3>
+				<hr>
+				<p><b>Firstly we keep our assumptions for estimation</b></p>
+				<p><b>Consistency:</b>The consistency can be assumed for the model because we the potential outcome of traffic jam in our model is defined as a binary variable and the potential outcome will not change because of treatments and road conditions.</p>
+				<p><b>Positivity:</b>We can assume positivity because the probability of each event in real life have to be positive</p>
+				<p><b>Exchangeability:</b> One road's realized treatment does not provide any information on what would have happened to another one under various treatment assignments<p>
+				<p><b>the form of \( \mu: \) </b>By Identification: <b> \( E[Y(a,x)∣X(w)=x]=E[Y∣X=x,A=a] \) </b>,So we don't need to consider the influence from W(weather condition). Then in linear regression, we can assume that \( \mu(X,A; \theta) =\theta'[X,A]^T  \) </p>
+				<p><b>Secondly we change a function to find estimation by replacing the second term with an interaction term in our assumptions</b></p>
+				<p> Instead of \( \mu(X,A; \theta) =\theta'[X,A]^T  \) , we assume that:\( \mu(X,A; \theta) =\theta'[X,XA]^T  \) </p>
+				<p><b> Thirdly, we use logistic regression to estimate ATE instead of linear regression </b></p>
+				<p>We need to introduce a new link function g, so that we can model \( \eta (X,A;\theta) \) as a linear function of \( \theta \) by logistic regression</p>
+				<p><b> If our modeling assumptions are violated, and there is an unmearsurable confounding in the model.</b></p> 
+				<p>Then we have to give up outcome regression. But Manski bound can give us a suitable bound.</p>
+					
+				<h3>Alternative ways for Estimation</h3>
+				<hr>
+				<ul>	
+                                                          	 <p> <b>By linear regression</b></p>	
+                                                          	 <p><li><b>\( \mu(X,A; \theta) =\theta'[X,A]^T  \) </b> </p>
+				<p>In the estimation part, the result is proved that the estimation of ATE is like: </p>
+				<p>\( ATE = E[Y(1)-Y(0)] =  \mu(X,1; \theta) -  \mu(X,0; \theta) = E_N[\theta ' [0,1]^T] =\beta'  \) </p>
+				<p>where  \( \beta \) comes from  \( \theta'[X,A]^T =\alpha ' X + \beta ' A \) and \( \theta \) comes from the data: \( \theta_{estimate} = E_N[[X,A]'[X,A]]^{-1}E_N[Y[X,A]^T] \)</li> </p>
+				</ul>
+				<ul>
+				<p><li><b>\( \mu(X,A; \theta) =\theta'[X,XA]^T \): </b></li></p>
+				<p> Similarly to the last part for estimation, we can minimize mean square error to estimate \( \theta \) so that \( \widehat{\theta}:=min_{\theta} E_{N}[(Y-\mu(X,A;\theta))^{2}].\).</p> 
+				<p>By taking derivative, we can get \( \theta = \widehat{\theta}:=E_{N}[\begin{bmatrix} X \\ XA \end{bmatrix}\begin{bmatrix} X \\ XA \end{bmatrix}']^{-1}E_{N}[Y\begin{bmatrix} X \\ XA \end{bmatrix}]  \) from the data.</p>
+				<p>The ATE is like \( ATE = E[Y(1)-Y(0)] =  \mu(X,X; \theta) -  \mu(X,0; \theta) = E_N[\theta ' [0,1]^T] =\beta'E_N[X] \) </p>
+				</ul>
+
+				<ul>
+				<p><li><b>By logistic regression</b></li></p>
+				<p>Recovering \( \theta \)​ to maximize the log-likelihood of the data. Similarly to before, we firstly choose the link function: \( logit(Y):=\frac{log(y)}{log(1-y)} \), such that \(g(E[y|X,A]):=g(\mu (Y,X;\theta)):=\eta (X,A;\beta). \) </p> 
+				<p> Since we get the logit function, we can model function \( \eta \) as a linear function of \( \theta \) and use data to recover \( \theta \)
+				<p>\( \hat { \theta } : = \max _ { \theta } E _ { N } [ \log \{ \mu ( X , A ; \theta ) ^ { Y } ( 1 - \mu ( X , A ; \theta ) ) ^ { 1 - Y } \} ]\) and take derivative. Once we choose that \(\eta(X,A;\theta):=\theta'\begin{bmatrix} x \\ A \end{bmatrix}. \)Then we have \(  ATE = E[Y(1)-Y(0)] =  \mu(X,1; \theta) -  \mu(X,0; \theta)\)</p>
+				</ul>
+                   
+				
+
+				<h3>Manski bound</h3>
+				<hr>
+				<ul>
+				<p>If our modelling assumptions for outcome regression are violated, then we need to consider to give a bound to measure the bound caused by unmeasured confounding.</p>
+				<p>If we have data in the model, then we can use Manski bound to capture the bias caused by unmeasured confounding.</p>                       
+				<p> Firstly we rewrite the conditional ATE</p>
+				<p> \(E[Y(1)-Y(0)|X]=E[Y(1)|X,A=1]P(A=1|X)+E[Y(1)|X=x,A=0]P(A=0|X=x)-E[Y(0)|X=x,A=1]P(A=1|X=x)-E[Y(0)|X=x,A=0]P(A=0|X=x)\). </p>
+				<p>And then by consistency and the definition of propensity score, the result equals to:  \( E[Y|X,A=1]P(A=1|X)+E[Y(1)|X=x,A=0](1-P(A=0|X=x))-E[Y(0)|X=x,A=1]P(A=1|X=x)-E[Y|X=x,A=0](1-P(A=0|X=x)) \)
+                                                           	<p>We can definite the parameter: \(C:=E[Y∣A=1,X]P(A=1∣X)−E[Y∣A=0,X](1−P(A=1∣X)) \) </p>
+				<p>​We can give a bound for conditional ATE:</p>
+				<p>\( C - P(A=1|X) \leq E[ Y(1)-Y(0) | X] \leq C + (1-P(A=1|X)) \)</p>
+					<p>Without any assupmtions, we can get the bound of conditional ATE depend on P(A=1∣X), we just need to keep the positivity property</p>
+				</ul>
+
+
+				
+				<h3>Assumptions that cannot be investigated</h3>
+				<hr>			
+				<ul>
+                                                          	 <p>For the result of Manski, we just need to keep the assumption of positivity because we compute conditional ATE. </p>
+				<p> For the result of outcome regression, we need to keep the assumptions of estimation and hold modeling assumptions.</p>
+				</ul>
+
+			< a href="https://shixiaoliang320.github.io/work02.html ">Go to Set Up Page</ a>	
+			< a href="https://shixiaoliang320.github.io/work01.html ">Go to Identification and Estimation Page</ a>	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
